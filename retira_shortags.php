@@ -1,5 +1,5 @@
 // Retira as short tags
-   function clearShortTags( $content, $arquivo ){
+   function clearShortTags( $arquivo ){
      	$pattern = '/<\?(?!php)(?!xml)=?/';
    		if( preg_match($pattern, $content ) ){
    			$content = preg_replace($pattern, '<?php ', $content );
