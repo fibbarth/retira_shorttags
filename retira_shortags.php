@@ -14,7 +14,7 @@
    		$replace = array( '<?php ', '<?php echo ');
    		if( preg_match($patternTag, $content ) || preg_match($patternEcho, $content ) ){
    			$content = preg_replace($pattern, $replace, $content );
-   			file_put_contents($arquivo, $content, LOCK_EX);
+   			file_put_contents($pathFile, $content, LOCK_EX);
             return true;
    		}
          return false;
