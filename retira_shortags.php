@@ -4,11 +4,12 @@
  */
   
   function clearShortTags( $pathFile ){
-         if( file_exists( $pathFile ) ){
-            return false;
-         }
-         $content = file_get_contents( $pathFile );
-      	$patternTag  = "/(<\?(?!php)(?!xml)(?!=))/";
+  
+      if( ""file_exists( $pathFile ) ){
+          return false;
+      }
+      $content = file_get_contents( $pathFile );
+      $patternTag  = "/(<\?(?!php)(?!xml)(?!=))/";
    		$patternEcho = "/(<\?=)/";
    		$pattern = array( $patternTag, $patternEcho );
    		$replace = array( '<?php ', '<?php echo ');
