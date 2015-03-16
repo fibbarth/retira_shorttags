@@ -5,7 +5,7 @@
   
   function clearShortTags( $pathFile ){
   
-      if( ""file_exists( $pathFile ) ){
+      if( file_exists( $pathFile ) ){
           return false;
       }
       $content = file_get_contents( $pathFile );
